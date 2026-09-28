@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>课程连续播放</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main>
+    <h1>课程连续播放</h1>
+    <p id="course">适用于智慧教育教师发展中心课程页</p>
+    <p id="status" role="status">正在检查页面…</p>
+    <p id="mode" class="diagnostics">连播：正在检查…</p>
+    <p id="diagnostics" class="diagnostics"></p>
+    <label class="speed-control" for="speed">扩展倍速
+      <select id="speed">
+        <option value="0">跟随平台</option>
+        <option value="1">1×</option>
+        <option value="1.25">1.25×</option>
+        <option value="1.5">1.5×</option>
+        <option value="2">2×</option>
+        <option value="3">3×</option>
+        <option value="4">4×</option>
+        <option value="6">6×</option>
+        <option value="8">8×</option>
+        <option value="12">12×</option>
+        <option value="16">16×</option>
+      </select>
+    </label>
+    <label class="test-control" for="display-cap">
+      <input id="display-cap" type="checkbox">
+      <span>测试：页面读取的倍速最多 2×</span>
+    </label>
+    <p class="test-hint">仅改变页面脚本读取的倍速值；实际速度显示在诊断行。无法绕过平台倍速检测，也不能保证获得学时。</p>
+    <div class="actions">
+      <button id="start" type="button">开始 / 继续</button>
+      <button id="pause" type="button">暂停</button>
+      <button id="stop" type="button">停止</button>
+    </div>
+    <button id="preview" class="preview" type="button">预览下一节</button>
+    <button id="test-next" class="test-next" type="button">测试切换下一节（立即切换）</button>
+    <p class="hint">点击“开始 / 继续”后，连播保持开启；只有扩展的“暂停”或“停止”会关闭。手动暂停、答题或验证会让播放等待处理。窗口最小化时后台会定期检查。</p>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

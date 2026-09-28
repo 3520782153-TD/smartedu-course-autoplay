@@ -1,0 +1,10 @@
+{
+  "name": "smartedu-autoplay",
+  "version": "0.9.1",
+  "private": true,
+  "description": "智慧教育教师发展中心课程连续播放扩展的本地测试脚本",
+  "scripts": {
+    "test": "node test-background.js && node test-catalog-structure.js && node test-content-heuristics.js && node test-page-rate-cap.js",
+    "check": "node --check background.js && node --check content.js && node --check page-rate-cap.js && node --check popup.js"
+  }
+}

@@ -1,0 +1,19 @@
+* { box-sizing: border-box; }
+body { width: 310px; margin: 0; color: #17243b; font: 14px/1.5 system-ui, sans-serif; background: #f7f9fc; }
+main { padding: 17px; }
+h1 { margin: 0 0 4px; font-size: 18px; }
+#course { margin: 0 0 14px; color: #627086; font-size: 12px; }
+#status { min-height: 42px; margin: 0 0 14px; padding: 10px; border-radius: 8px; background: #e9f1ff; overflow-wrap: anywhere; }
+.diagnostics { margin: -5px 0 12px; color: #627086; font-size: 12px; }
+.speed-control { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+select { min-width: 125px; padding: 7px; border: 1px solid #b7c6dc; border-radius: 7px; background: white; color: #17243b; }
+.test-control { display: flex; align-items: center; gap: 8px; margin-bottom: 3px; }
+.test-control input { margin: 0; }
+.test-hint { margin: 0 0 14px 21px; color: #627086; font-size: 12px; }
+.actions { display: flex; gap: 7px; }
+button { flex: 1; padding: 8px 3px; border: 1px solid #b7c6dc; border-radius: 7px; background: white; color: #17243b; cursor: pointer; }
+button:first-child { flex: 1.6; border-color: #2667c9; background: #2667c9; color: white; }
+button:disabled { opacity: .5; cursor: default; }
+.preview { width: 100%; margin-top: 8px; }
+.test-next { width: 100%; margin-top: 8px; }
+.hint { margin: 13px 0 0; color: #627086; font-size: 12px; }

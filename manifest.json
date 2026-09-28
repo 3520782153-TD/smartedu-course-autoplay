@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "智慧教育课程连续播放",
+  "version": "0.9.1",
+  "description": "为智慧教育教师发展中心课程提供连续播放、目录切换诊断及播放速度测试。",
+  "permissions": ["activeTab", "storage", "alarms"],
+  "host_permissions": ["https://www.smartedu.cn/*"],
+  "background": { "service_worker": "background.js" },
+  "action": {
+    "default_title": "课程连续播放",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.smartedu.cn/*"],
+      "js": ["page-rate-cap.js"],
+      "all_frames": true,
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": ["https://www.smartedu.cn/jiaoshi/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
