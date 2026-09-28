@@ -76,14 +76,3 @@ npm run check
 | `page-rate-cap.js` | 2× 属性读取测试 |
 | `popup.html`、`popup.css`、`popup.js` | 扩展弹窗 |
 | `test-*.js` | 本地回归测试 |
-
-## 发布到 GitHub
-
-本目录应作为仓库根目录。公开仓库可能展示 Git 提交中的作者邮箱；推送前可用 `git log -1 --format='%an <%ae>'` 核对。创建一个**空的** GitHub 仓库后，在本目录执行（将地址换成自己的仓库地址）：
-
-```sh
-git remote add origin https://github.com/<用户名>/<仓库名>.git
-git push -u origin main
-```
-
-仓库目前未附带开源许可证。如果要允许他人复制、修改或分发，请在发布时添加你选择的许可证。
